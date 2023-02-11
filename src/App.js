@@ -1,29 +1,25 @@
+import { useState } from 'react';
 import './App.css';
 
-const Person = (props) => {
-  return (
-    <>
-    <h1>Name : {props.name}</h1>
-    <h2>Last Name : {props.lastName}</h2>
-    <h3>Age: {props.age}</h3>
-    </>
-  )
-}
-
 const App = () => {
-  //const name = "Jhin";
-  //const isNameShowing = true;
-  //const isUserLoggedIN = true;
+  const [counter, setCounter] = useState(0);
+/*
+Whenever you call something as a function and it starts with "use", in React, we call that a hook.
+const [counter, setCounter] = useState(0);
+
+inside brackets
+1. name of that state(counter)
+2. setter function(setCounter) - rule of thumb to add "set" to the name
+provide initial value on parenthesis
+
+Now we can use this counter as a normal JS variable
+*/
 
   return (
     <div className="App">
-
-        <Person name = "Jhin" lastName = "Virtuoso" age = "???"/>
-        <Person name = "John"/>
-        <Person lastName = "Doe" age = {2+20}/>
-        <Person />
-        <Person />
-
+      <button onClick={() => setCounter((prevCount) => prevCount - 1)}>-</button>
+      <h1>{counter}</h1>
+      <button onClick={() => setCounter((prevCount) => prevCount + 1)}>+</button>
     </div>
   );
 }
