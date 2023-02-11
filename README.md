@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Info
+This is a hands-on learning repository of ReactJS using https://youtu.be/b9eMGE7QtTk as a guide.
+
 ## Available Scripts
 
 In the project directory, you can run:
